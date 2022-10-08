@@ -1,0 +1,282 @@
+#1: Program which calculates area of a circle
+import math
+radius = eval(input('wat radius? '))
+area = (3.14*radius)**2
+print('area of circle is: ')
+
+#2: Username which makes a space between da names
+fname = str((input('enter your first name ')))
+lname = str((input(' enter your last name ')))
+print('hello,',lname,fname)
+
+#3: display first and last color from following list
+color_list= ["Red","Green","White","Black"]
+print(color_list[0], color_list[3])
+
+
+#4: program accepts an integer (n) and computes the value of n+nn+nnn
+from tkinter import N
+n = eval(input('enter da integer'))
+n1 = int( "%s" % n )
+n2 = int( "%s%s" % (n,n) )
+n3 = int( "%s%s%s" % (n,n,n) )
+print (n1+n2+n3)
+
+#5: Python program to get the volume of a sphere with radius 6. 
+    #The volume of the sphere is : V = 4/3 × π × r3 = π × d3/6.
+r = 6
+d = r**2
+v =  (3.14 * r**3) * 4/3
+v2 = 3.14*(d**3) /6
+print(bool(v == v2))
+print (v)
+print (v2)
+
+#6 get the difference between a given number and 17, if the number is greater than 17 return 
+      # double the absolute difference
+sum = eval(input('enter da number'))
+def function(this):
+    number = this - 17 
+    if this>17:
+        print (number*2)
+    else: 
+        print(number)
+function(sum)
+
+#7 calculate the sum of three given numbers, if the values are equal then return thrice of their 
+   #sum.
+
+sum1=eval(input('wat is first number?  '))
+sum2=eval(input('wat is second number?  '))
+sum3=eval(input('wat is third number?  '))
+
+def myfunction (one,two,three):
+    sum = one + two + three
+    
+    if one==two==three:
+        print(sum*3)
+    else: print (sum)
+
+myfunction(sum1,sum2,sum3)
+
+
+#8  find whether a given number (accept from the user) is even or odd, print out an appropriate 
+     #message to the user.
+
+number = eval(input('enter the number please  '))
+def myfunction3(n):
+    if n%2 == 0:
+        print('your number,',n,',is an even number')
+    else: print('your number,', n,',is an odd number')
+
+myfunction3(number)
+
+
+
+#9 Write a Python program to test whether a letter is a vowel or not
+
+letter = input('enter a letter  ')
+
+vowels = ['A','E','I','O','U']
+
+if letter.upper() in vowels:
+    print (letter, 'is a vowel!')
+else: print ('letter is not vowel :( ')
+
+
+#10 program to check whether a specified value is contained in a group of values.
+group_of_values = range(1,51)
+sv = eval(input('enter a specified value  '))
+
+if sv in group_of_values:
+    print('specified value is conatined in group of values')
+else: print('specified value is not contained in group of values') 
+
+
+#11.) program to create a histogram from a given list of integers
+
+mylist = [1,2,2,2,2,2,2,2,2,2,5,6,7,7,8,900]
+
+def myfunction(here)->dict:
+    newdict = {}
+    for i in here:
+        newdict[i] = newdict.get(i,0) + 1
+    print(newdict)
+
+myfunction(mylist) # i have no idea how the output turns out like that but it works... tried out random shit for a long time until i got this
+
+
+#12 print all even numbers from a given numbers list in the same order
+numbers = [ 
+ 386, 462, 47, 418, 907, 344, 236, 375, 823, 566, 597, 978, 328, 615, 953, 345, 
+ 399, 162, 758, 219, 918, 237, 412, 566, 826, 248, 866, 950, 626, 949, 687, 217, 
+ 815, 67, 104, 58, 512, 24, 892, 894, 767, 553, 81, 379, 843, 831, 445, 742, 717, 
+ 958,743, 527 ]
+
+def daevenfunc(ok) -> list:
+    evennumbers = []
+    for i in ok:
+        if i % 2 == 0:
+            evennumbers.append(i)
+    return evennumbers
+
+evenlist = daevenfunc(numbers)
+print(evenlist) # i guess tryharding the previous question paid off.......
+
+
+#13.)program that will accept the base and height of triangle and find area
+
+b = eval(input('enter the base of triangle in cm  '))
+h = eval(input('enter the height of the triangle  '))
+area = (b * h)/2
+
+print('area of triangle is: ', area) #the question just went easier all of a sudden.... maybe i should be worried?
+
+
+#14.)  least common multiple (LCM) of two positive integers
+
+def da_lcm(one,two):
+    if one>two:
+        more = one
+    else:
+        more = two
+    
+    while(True):
+        if((more%one == 0) and (more%two == 0)):
+            lcm = more
+            break
+        more += 1
+    return lcm
+
+a = eval(input('enter da first numberrrr  '))
+b = eval(input('maybe the second number now?  '))
+
+finallyy = da_lcm(a,b)
+
+print('the lcm for', a, 'and', b, 'is', finallyy)#was right to worry i guess....
+
+
+#15 program to sum of three given integers. However, if two values are equal sum will be zero
+
+num1 = eval(input('enter first num   '))
+num2 = eval(input('enter second num  '))
+num3 = eval(input('enter third num  '))
+
+def ihaveputmorehoursonthisassignmentthanmostmovies(a,b,c):
+    if a == b == c or a == b or b == c or a == c:
+        return int(0)
+    else:
+        return a+b+c
+now = ihaveputmorehoursonthisassignmentthanmostmovies(num1,num2,num3)
+print(now)
+
+
+
+#16 program to solve (x + y) * (x + y)
+
+x = eval(input('enter x  '))
+y = eval(input('enter y  '))
+
+def ez(jin,kazama):
+    cal = (jin + kazama) * (jin + kazama)
+    proper = print(f'({jin} + {kazama}) ^ 2) = {cal}')
+    return proper
+
+ez(x,y)#tricky format expected eeehhh...
+
+
+#17 program to compute the future value of a specified principal amount, rate of interest, and a number of 
+    #years
+
+amt = eval(input('enter the amount of money u lacked... (enter10 000) '))
+int = eval(input('what is the interest did that shady italian charge you...(enter3.5)  '))
+years = eval(input('how much time did the mafia grant you to pay back in?(7years)  '))
+#formula is  A(1 + 0.01(i))^t, A is amount,i is interest, and t is time/year
+def money2paybackgodfather(a,i,y):
+    
+    total = a*((1 +(0.01* i))**y)
+    totalrounded = (round(total,2))
+    print (f'you owe the mafia {totalrounded}')
+    
+
+money2paybackgodfather(amt,int,years) #had a hard time with the formula
+
+
+#18  program to compute the distance between the points (x1, y1) and (x2, y2)
+import math
+x1 = eval(input('enter first X  '))
+y1 = eval(input('enter first Y  '))
+x2 = eval(input('enter secind X  '))
+y2 = eval(input('enter second Y  '))
+
+def somecalculater(a1,a2,b1,b2):
+    go1 = ((b1 - a1)**2) + ((b2 - a2)**2)
+    print ('distance is', math.sqrt(go1))
+
+somecalculater(x1,y1,x2,y2)
+
+
+
+#19 program to sum of the first n positive integers.
+n = eval(input('enter value of n  '))
+def firstn(n):
+    formula = (n * (n + 1)) / 2
+    print(f'first sum of n value is {formula}')
+    
+firstn(n)
+
+
+
+#20  convert height (in feet and inches) to centimeters.
+
+feet = eval(input('input number in feet  '))
+centimeters = feet * 30.48
+
+print(centimeters, 'centimeters')
+
+#21 program to calculate the hypotenuse of a right angled triangle
+import math
+a = eval(input('enter the A value of triangle  '))
+b = eval(input('enter the B value of triangle  '))
+print(math.hypot(a,b)) #is this cheating? i mean this built-in exists for reason... or does it?
+
+#22 bmi calculator, my first ever program...
+
+weight = eval(input('enter your weight in KG '))
+height = eval(input('enter your height in M  '))
+def bmicalc(w,h):
+    formula = w/(h**2)
+    print('your bmi is:', formula)
+    if formula<25:
+        print("you're in good shape! supposedly...")
+    else:
+        print("FX mall has a nice celebrity fitness gym at the third floor, check it out!")
+
+bmicalc(weight, height)
+
+
+#23 calculate midpoint of a line
+
+x1 = eval(input('enter value of x1  '))
+y1 = eval(input('enter value of y1  '))
+x2 = eval(input('enter value of x2  '))
+y2 = eval(input('enter value of y2  '))    
+def midpoint(x1,y1,x2,y2):
+    mpx = (x1 + x2)/2
+    mpy = (y1 +y2)/2
+    print(f'the midpoint is {mpx},{mpy}')
+
+midpoint(x1,y1,x2,y2)
+
+
+
+#24 a program which will find all such numbers which are divisible by 7 but are not a multiple of 5, between 2000 and 
+    #hould be printed in a comma-separated sequence on a single line.
+
+list=[]
+for me in range(200,3201):
+    if (me%7==0) and (me%5!=0):
+        list.append(str((me)))
+
+
+print(','.join(list))#goodnight
